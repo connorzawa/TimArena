@@ -6,8 +6,6 @@ import java.awt.event.MouseListener;
 
 import javax.swing.*;
 
-import menu.menuButtons.MenuButtons;
-
 
 import timArena.TextBoxGameButtons.QuitListener;
 import timArena.TextBoxGameButtons.SendListener;
@@ -107,43 +105,42 @@ public class TextBoxGame extends JFrame{
 		c.gridy = 0;
 		c.gridx = 2;
 		this.add(button1, c);
-		button1.addActionListener(new MenuButtons());
-		
+		Menu menu = new Menu();
+				
 		c.gridy = 0;
 		c.gridx = 3;
 		this.add(button2, c);
-		button2.addActionListener(new MenuButtons());
+
 
 		c.gridy = 1;
 		c.gridx = 2;
 		this.add(button3, c);
-		button3.addActionListener(new MenuButtons());
+		
 
 		c.gridy = 1;
 		c.gridx = 3;
 		this.add(button4, c);
-		button4.addActionListener(new MenuButtons());
+	
 
 		c.gridy = 2;
 		c.gridx = 2;
 		this.add(button5, c);
-		button5.addActionListener(new MenuButtons());
+	
 
 		c.gridy = 2;
 		c.gridx = 3;
 		this.add(button6, c);
-		button6.addActionListener(new MenuButtons());
+
 
 		c.gridy = 3;
 		c.gridx = 2;
 		this.add(button7, c);
-		button7.addActionListener(new MenuButtons());
+
 
 		c.gridy = 3;
 		c.gridx = 3;
 		this.add(button8, c);
-		button8.addActionListener(new MenuButtons());
-
+	
 		// ========== BOTTOM 4 BUTTONS ==========		
 
 		c.gridy = 8;

@@ -1,14 +1,16 @@
 package menu.menuClasses;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import menu.menuButtons.MenuButtons;
+import javax.swing.JButton;
+
 import timArena.Main;
 import timArena.TextBoxGame;
 import timArena.Util;
 
 
-public class Menu {
+public class Menu implements ActionListener{
 	
 	public String name;
 
@@ -118,28 +120,28 @@ public class Menu {
 	{
 		
 		TextBoxGame.button1.setText(" ");
-		TextBoxGame.button1.addActionListener(new MenuButtons());
+		TextBoxGame.button1.addActionListener(this);
 		
 		TextBoxGame.button2.setText(" ");
-		TextBoxGame.button2.addActionListener(new MenuButtons());
+		TextBoxGame.button2.addActionListener(this);
 		
 		TextBoxGame.button3.setText(" ");
-		TextBoxGame.button3.addActionListener(new MenuButtons());
+		TextBoxGame.button3.addActionListener(this);
 		
 		TextBoxGame.button4.setText(" ");
-		TextBoxGame.button4.addActionListener(new MenuButtons());
+		TextBoxGame.button4.addActionListener(this);
 		
 		TextBoxGame.button5.setText(" ");
-		TextBoxGame.button5.addActionListener(new MenuButtons());
+		TextBoxGame.button5.addActionListener(this);
 		
 		TextBoxGame.button6.setText(" ");
-		TextBoxGame.button6.addActionListener(new MenuButtons());
+		TextBoxGame.button6.addActionListener(this);
 		
 		TextBoxGame.button7.setText(" ");
-		TextBoxGame.button7.addActionListener(new MenuButtons());
+		TextBoxGame.button7.addActionListener(this);
 		
 		TextBoxGame.button8.setText(" ");
-		TextBoxGame.button8.addActionListener(new MenuButtons());	
+		TextBoxGame.button8.addActionListener(this);	
 
 	}
 	
@@ -173,4 +175,30 @@ public class Menu {
 		for( ActionListener al : TextBoxGame.button8.getActionListeners() ) {
 			TextBoxGame.button8.removeActionListener( al );
 		}	}
-}
+	
+	
+	public void getSend()
+	{
+		
+	}
+	
+	/* MENU BUTTONS */
+	
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			Main.needsAction = false;
+			
+			String name = ((JButton) e.getSource()).getActionCommand();	
+			checkAction(name);
+		}
+
+		protected void checkAction(String name) 
+		{
+			
+		}
+		
+
+	}
+
+

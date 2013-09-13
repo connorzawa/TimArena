@@ -7,12 +7,22 @@ public class Util {
 	
 	public static void newLine()
 	{
-		TextBoxGame.output.append("\n\n");
+		TextBoxGame.output.append("\n");
 	}
 	
 	public static void clear()
 	{
 		TextBoxGame.output.setText("");
+		TextBoxGame.display.setText("");
+	}
+	
+	public static void clearOutput()
+	{
+		TextBoxGame.output.setText("");
+	}
+	
+	public static void clearDisplay()
+	{
 		TextBoxGame.display.setText("");
 	}
 	

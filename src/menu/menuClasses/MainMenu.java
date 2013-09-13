@@ -4,9 +4,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-import menu.menuButtons.GameMenuButtons;
-import menu.menuButtons.MainMenuButtons;
-import menu.menuButtons.MenuButtons;
+
+import timArena.Main;
 import timArena.TextBoxGame;
 import timArena.Util;
 
@@ -14,8 +13,6 @@ import timArena.Util;
 
 @SuppressWarnings("all")
 public class MainMenu extends Menu{
-
-	public MenuButtons al = new MainMenuButtons();
 
 	public void initialize()
 	{
@@ -33,30 +30,45 @@ public class MainMenu extends Menu{
 	{
 
 		TextBoxGame.button1.setText("New Game");
-		TextBoxGame.button1.addActionListener(new MainMenuButtons());
+		TextBoxGame.button1.addActionListener(this);
 
 		TextBoxGame.button2.setText("Load Game");
-		TextBoxGame.button2.addActionListener(new MainMenuButtons());
+		TextBoxGame.button2.addActionListener(this);
 
 		TextBoxGame.button3.setText(" ");
-		TextBoxGame.button3.addActionListener(new MainMenuButtons());
+		TextBoxGame.button3.addActionListener(this);
 
 		TextBoxGame.button4.setText(" ");
-		TextBoxGame.button4.addActionListener(new MainMenuButtons());
+		TextBoxGame.button4.addActionListener(this);
 
 		TextBoxGame.button5.setText(" ");
-		TextBoxGame.button5.addActionListener(new MainMenuButtons());
+		TextBoxGame.button5.addActionListener(this);
 
 		TextBoxGame.button6.setText(" ");
-		TextBoxGame.button6.addActionListener(new MainMenuButtons());
+		TextBoxGame.button6.addActionListener(this);
 
 		TextBoxGame.button7.setText(" ");
-		TextBoxGame.button7.addActionListener(new MainMenuButtons());
+		TextBoxGame.button7.addActionListener(this);
 
 		TextBoxGame.button8.setText(" ");
-		TextBoxGame.button8.addActionListener(new MainMenuButtons());	
+		TextBoxGame.button8.addActionListener(this);	
 	}
 
+	@Override
+	protected void checkAction(String name)
+	{
+		if(name == "New Game")
+		{
+			TextBoxGame.output.setText("");
+			Util.changeMenus(Main.currentMenu, new NewGameMenu());
+		}
+		if(name == "Load Game")
+		{
+			System.out.println("BUGGYYY");
+		}
+
+	}
+	
 }
 
 

@@ -15,10 +15,7 @@ public class TextBoxGameButtons {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 
-			Main.heldInput = TextBoxGame.input.getText();
-			TextBoxGame.input.setText("");
-			TextBoxGame.output.append(Main.heldInput + " is now being held.");
-			Util.newLine();
+			Main.currentMenu.getSend();
 		}
 
 	}
