@@ -80,6 +80,7 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		{
 			Main.player.Name = TextBoxGame.input.getText();
 			Util.clearDisplay();
+			Util.clearInput();
 			Util.writeOutput("Player is named: " + Main.player.Name);
 			player = false;
 		}
@@ -87,6 +88,7 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		{
 			Main.player.townName = TextBoxGame.input.getText();
 			Util.clearDisplay();
+			Util.clearInput();
 			Util.writeOutput("Town is named: " + Main.player.townName);
 			town = false;
 		}
@@ -94,6 +96,7 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		{
 			cit1 = TextBoxGame.input.getText();
 			Util.clearDisplay();
+			Util.clearInput();
 			Util.writeOutput("Male Shop Keeper is named: " + cit1);
 			msk = false;
 		}
@@ -101,6 +104,7 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		{
 			cit2 = TextBoxGame.input.getText();
 			Util.clearDisplay();
+			Util.clearInput();
 			Util.writeOutput("Female Shop Keeper is named: " + cit2);	
 			fsk = false;
 		}
@@ -108,6 +112,7 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		{
 			cit3 = TextBoxGame.input.getText();
 			Util.clearDisplay();
+			Util.clearInput();
 			Util.writeOutput("Male Warrior is named: " + cit3);
 			mw = false;
 		}
@@ -115,6 +120,7 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		{
 			cit4 = TextBoxGame.input.getText();
 			Util.clearDisplay();
+			Util.clearInput();
 			Util.writeOutput("Female Warrior is named: " + cit4);
 			fw = false;
 		}

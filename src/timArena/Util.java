@@ -26,6 +26,11 @@ public class Util {
 		TextBoxGame.display.setText("");
 	}
 	
+	public static void clearInput()
+	{
+		TextBoxGame.input.setText("");
+	}
+	
 	public static void writeOutput(String str)
 	{
 		TextBoxGame.output.append(str);
@@ -61,4 +66,7 @@ public class Util {
 			e.printStackTrace();
 		}
 	}
+	
+
+	
 }

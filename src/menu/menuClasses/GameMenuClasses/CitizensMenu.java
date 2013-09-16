@@ -11,7 +11,8 @@ import timArena.Util;
 public class CitizensMenu extends Menu{
 	private Citizen[] cz;
 	private int page;
-	
+	private boolean war;
+
 	public void initialize()
 	{
 		super.name = "CitizensMenu";
@@ -20,7 +21,8 @@ public class CitizensMenu extends Menu{
 		update();
 		run();
 	}
-	
+
+	// INITIAL BUTTON NAMES AND LISTENERS
 	public void display()
 	{
 
@@ -44,7 +46,7 @@ public class CitizensMenu extends Menu{
 
 		TextBoxGame.button7.setText("Previous");
 		TextBoxGame.button7.addActionListener(this);
-		
+
 		TextBoxGame.button8.setText("Next");
 		TextBoxGame.button8.addActionListener(this);	
 	}
@@ -53,8 +55,10 @@ public class CitizensMenu extends Menu{
 	protected void checkAction(String name)
 	{
 
+		// UPDATE BUTTONS FOR DIFFERENT SHOP KEEPERS
 		if(name == "Shop Keepers")
 		{
+			war = false;
 			page = 0;
 			cz = Main.player.Builders;
 
@@ -102,11 +106,13 @@ public class CitizensMenu extends Menu{
 				TextBoxGame.button6.setEnabled(false);
 			}
 		}
-
+		
+		// UPDATE BUTTONS FOR DIFFERENT WARRIORS
 		else if(name == "Warriors")
 		{
 			page = 0;
 			cz = Main.player.Warriors;
+			war = true;
 
 			if(Main.player.warriorsPop > page*4+0)
 			{
@@ -162,28 +168,49 @@ public class CitizensMenu extends Menu{
 
 		}
 
-		//////////////////////// A PLAYER FUNCTION //////////////////
+		/* DISPLAYS STATS FOR THE CHOSEN CITIZEN */
 
-
-		else if(name == Main.player.Warriors[(page*4 + 0)].getName())
+		// IF A WARRIOR
+		else if(war)
 		{
-			System.out.println(Main.player.Warriors[(page*4 + 0)].getName());
-			printStats(Main.player.Warriors[page*4+0]);
+			if(name == Main.player.Warriors[(page*4 + 0)].getName())
+			{
+				printStats(Main.player.Warriors[page*4+0]);
+			}
+			else if(name == Main.player.Warriors[(page*4 + 1)].getName())
+			{
+				printStats(Main.player.Warriors[page*4+1]);
+			}
+			else if(name == Main.player.Warriors[(page*4 + 2)].getName())
+			{
+				printStats(Main.player.Warriors[page*4+2]);
+			}
+			else if(name == Main.player.Warriors[(page*4 + 3)].getName())
+			{
+				printStats(Main.player.Warriors[page*4+3]);
+			}
 		}
-		else if(name == Main.player.Warriors[(page*4 + 1)].getName())
+		
+		// IF A BUILDER
+		else if(!war)
 		{
-			printStats(Main.player.Warriors[page*4+1]);
+			if(name == Main.player.Builders[(page*4 + 0)].getName())
+			{
+				printStats(Main.player.Builders[(page*4 + 0)]);
+			}
+			else if(name == Main.player.Builders[(page*4 + 1)].getName())
+			{
+				printStats(Main.player.Builders[(page*4 + 1)]);
+			}
+			else if(name == Main.player.Builders[(page*4 + 2)].getName())
+			{
+				printStats(Main.player.Builders[(page*4 + 3)]);
+			}
+			else if(name == Main.player.Builders[(page*4 + 3)].getName())
+			{
+				printStats(Main.player.Builders[(page*4 + 4)]);
+			}
 		}
-		else if(name == Main.player.Warriors[(page*4 + 2)].getName())
-		{
-			printStats(Main.player.Warriors[page*4+2]);
-		}
-		else if(name == Main.player.Warriors[(page*4 + 3)].getName())
-		{
-			printStats(Main.player.Warriors[page*4+3]);
-		}
-
-		//else if(name == Main.player.Builders[])
 	}
 
 

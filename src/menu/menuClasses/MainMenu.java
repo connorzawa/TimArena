@@ -62,7 +62,8 @@ public class MainMenu extends Menu{
 			TextBoxGame.output.setText("");
 			Util.changeMenus(Main.currentMenu, new NewGameMenu());
 		}
-		if(name == "Load Game")
+		
+		else if(name == "Load Game")
 		{
 			System.out.println("BUGGYYY");
 		}

@@ -1,5 +1,7 @@
 package menu.menuClasses.GameMenuClasses;
 
-public class ExploreMenu {
+import menu.menuClasses.Menu;
+
+public class ExploreMenu extends Menu {
 
 }

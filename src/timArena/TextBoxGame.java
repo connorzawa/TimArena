@@ -20,7 +20,7 @@ public class TextBoxGame extends JFrame{
 	public static TextArea event = new TextArea("", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 	public static TextArea input = new TextArea("",1,1,TextArea.SCROLLBARS_HORIZONTAL_ONLY);
 
-	public static JButton store = new JButton("Hold Input");
+	public static JButton store = new JButton("Send");
 
 	public static JButton button1 = new JButton(" ");
 	public static JButton button2 = new JButton(" ");

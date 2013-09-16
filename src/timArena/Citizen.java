@@ -3,9 +3,9 @@ package timArena;
 
 public class Citizen {
 
-	public int strength, toughness, intellect, dexterity, luck, vitality;
-	public String name;
-	public boolean male, warrior; 
+	private int strength, toughness, intellect, dexterity, luck, vitality;
+	private String name;
+	private boolean male, warrior, inAParty; 
 	
 	public Citizen(int strength, int toughness, int dexterity, int intellect, int vitality,  int luck, String name, boolean male, boolean warrior)
 	{
@@ -19,14 +19,14 @@ public class Citizen {
 		this.dexterity = dexterity;
 	}
 	
-	public void setAttack(int attack)
+	public void setStrength(int strength)
 	{
-		this.strength = attack;
+		this.strength = strength;
 	}
 	
-	public void setDefense(int defense)
+	public void setToughness(int toughness)
 	{
-		this.toughness = defense;
+		this.toughness = toughness;
 	}
 	
 	public void setLuck(int luck)
@@ -39,11 +39,28 @@ public class Citizen {
 		this.vitality = vitality;
 	}
 	
+	public void setDexterity(int dexterity)
+	{
+		this.dexterity = dexterity;
+	}
+	
+	
 	public void setName(String name)
 	{
 		this.name = name;
 	}
 	
+	public void changePartyStatus()
+	{
+		if(this.inAParty)
+		{
+			this.inAParty = false;
+		}
+		else
+		{
+			this.inAParty = true;
+		}
+	}
 	//----------Gets--------------------
 	
 	public int getStrength()
