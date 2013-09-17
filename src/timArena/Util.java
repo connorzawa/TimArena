@@ -12,18 +12,18 @@ public class Util {
 	
 	public static void clear()
 	{
-		TextBoxGame.output.setText("");
-		TextBoxGame.display.setText("");
+		TextBoxGame.output.setText(null);
+		TextBoxGame.display.setText(null);
 	}
 	
 	public static void clearOutput()
 	{
-		TextBoxGame.output.setText("");
+		TextBoxGame.output.setText(null);
 	}
 	
 	public static void clearDisplay()
 	{
-		TextBoxGame.display.setText("");
+		TextBoxGame.display.setText(null);
 	}
 	
 	public static void clearInput()
@@ -39,8 +39,7 @@ public class Util {
 	
 	public static void writeDisplay(String str)
 	{
-		TextBoxGame.display.setText("");
-		TextBoxGame.display.append(str);
+		TextBoxGame.display.setText(str);
 		newLine();
 	}
 	
@@ -57,16 +56,13 @@ public class Util {
 		Main.currentMenu.initialize();
 	}
 	
-	public static void hold(int hold)
+	public static void hold(int i)
 	{
 		try {
-			Thread.sleep(hold);
+			Thread.sleep(i);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
-	
-
-	
+		
 }

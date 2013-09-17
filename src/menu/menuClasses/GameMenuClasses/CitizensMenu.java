@@ -1,7 +1,7 @@
 package menu.menuClasses.GameMenuClasses;
 
 
-import menu.menuButtons.GameMenuButtonsButtons.*;
+
 import menu.menuClasses.Menu;
 import timArena.Citizen;
 import timArena.Main;
@@ -9,7 +9,6 @@ import timArena.TextBoxGame;
 import timArena.Util;
 
 public class CitizensMenu extends Menu{
-	private Citizen[] cz;
 	private int page;
 	private boolean war;
 
@@ -60,8 +59,6 @@ public class CitizensMenu extends Menu{
 		{
 			war = false;
 			page = 0;
-			cz = Main.player.Builders;
-
 			if(Main.player.buildersPop > page*4+0)
 			{
 				TextBoxGame.button3.setText(Main.player.Builders[0].getName());
@@ -111,7 +108,6 @@ public class CitizensMenu extends Menu{
 		else if(name == "Warriors")
 		{
 			page = 0;
-			cz = Main.player.Warriors;
 			war = true;
 
 			if(Main.player.warriorsPop > page*4+0)

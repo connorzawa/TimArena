@@ -58,20 +58,16 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 
 		TextBoxGame.button8.setText("Finish");
 		TextBoxGame.button8.addActionListener(this);	
-
 	}
 
 	public void run()
 	{
-		Util.writeDisplay("");
-		String status = "Player Name: "+ Main.player.Name 
+		Util.writeDisplay("Player Name: "+ Main.player.Name 
 				+ "\nTown Name: " + Main.player.townName + "\n\n" 
 				+ "Male Shop Keeper: " + cit1 + "\n" 
 				+ "Female Shop Keeper: " + cit2 + "\n" 
 				+ "Male Warrior: " + cit3 + "\n" +
-				"Female Warrior: " + cit4 + "\n";
-
-		Util.writeDisplay(status);
+				"Female Warrior: " + cit4 + "\n");
 	}
 	
 	public void getSend()
@@ -79,7 +75,6 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		if(player)
 		{
 			Main.player.Name = TextBoxGame.input.getText();
-			Util.clearDisplay();
 			Util.clearInput();
 			Util.writeOutput("Player is named: " + Main.player.Name);
 			player = false;
@@ -87,7 +82,6 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		else if(town)
 		{
 			Main.player.townName = TextBoxGame.input.getText();
-			Util.clearDisplay();
 			Util.clearInput();
 			Util.writeOutput("Town is named: " + Main.player.townName);
 			town = false;
@@ -95,7 +89,6 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		else if(msk)
 		{
 			cit1 = TextBoxGame.input.getText();
-			Util.clearDisplay();
 			Util.clearInput();
 			Util.writeOutput("Male Shop Keeper is named: " + cit1);
 			msk = false;
@@ -103,7 +96,6 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		else if(fsk)
 		{
 			cit2 = TextBoxGame.input.getText();
-			Util.clearDisplay();
 			Util.clearInput();
 			Util.writeOutput("Female Shop Keeper is named: " + cit2);	
 			fsk = false;
@@ -111,7 +103,6 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		else if(mw)
 		{
 			cit3 = TextBoxGame.input.getText();
-			Util.clearDisplay();
 			Util.clearInput();
 			Util.writeOutput("Male Warrior is named: " + cit3);
 			mw = false;
@@ -119,7 +110,6 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 		else if(fw)
 		{
 			cit4 = TextBoxGame.input.getText();
-			Util.clearDisplay();
 			Util.clearInput();
 			Util.writeOutput("Female Warrior is named: " + cit4);
 			fw = false;
@@ -173,8 +163,7 @@ public boolean player = false, town = false, msk = false, fsk = false, mw = fals
 			fw = true; 
 			player = false; msk = false; fsk = false; mw = false; town = false;
 		}
-		
-		run();		
+				
 		
 		if(name == "Finish")
 		{

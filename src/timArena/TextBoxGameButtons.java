@@ -5,16 +5,16 @@ import java.awt.event.*;
 import menu.menuClasses.GameMenu;
 import menu.menuClasses.Menu;
 import menu.menuClasses.NewGameMenu;
+import timArena.Util;
 
 @SuppressWarnings("all")
 public class TextBoxGameButtons {
 
 	static class SendListener implements ActionListener
 	{
-
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
-
 			Main.currentMenu.getSend();
 		}
 
@@ -46,8 +46,6 @@ public class TextBoxGameButtons {
 
 	static class MainListener implements ActionListener
 	{
-
-
 		public void actionPerformed(ActionEvent e) {
 			if(Main.currentMenu.name != "GameMenu"){
 				Util.changeMenus(Main.currentMenu, new GameMenu());

@@ -16,8 +16,8 @@ public class Menu implements ActionListener{
 
 	public Menu()
 	{
-		this.display();
 		this.update();
+		display();
 	}
 	
 	public void initialize()
@@ -27,6 +27,7 @@ public class Menu implements ActionListener{
 	
 	public void update()
 	{
+				
 		TextBoxGame.button1.setToolTipText(TextBoxGame.button1.getText());
 		TextBoxGame.button2.setToolTipText(TextBoxGame.button2.getText());
 		TextBoxGame.button3.setToolTipText(TextBoxGame.button3.getText());
@@ -106,14 +107,17 @@ public class Menu implements ActionListener{
 		else
 		{
 			TextBoxGame.button8.setEnabled(true);
-		}		
+		}
+		
 	}
 	
 	public void close()
 	{
+		Util.clearOutput();
+		Util.clearDisplay();
 		Main.lastMenu = this;
 		removeActionListeners();
-		Util.clear();
+
 	}
 	
 	public void display()

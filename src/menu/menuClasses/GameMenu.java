@@ -7,8 +7,6 @@ import timArena.TextBoxGame;
 import timArena.Util;
 
 
-
-
 public class GameMenu extends Menu{
 
 	public void initialize()
@@ -44,14 +42,14 @@ public class GameMenu extends Menu{
 
 		TextBoxGame.button8.setText(" ");
 		TextBoxGame.button8.addActionListener(this);	
+		
 	}		
 
 	public void run()
 	{
-		String status = (Main.player.Name + " of " + Main.player.townName + 
+		Util.writeDisplay(Main.player.Name + " of " + Main.player.townName + 
 				"\nGold: " + Main.player.gold + "\nPopulation: "
 				+ (Main.player.buildersPop + Main.player.warriorsPop));
-		Util.writeDisplay(status);
 	}
 	
 	@Override
