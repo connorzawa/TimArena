@@ -60,7 +60,7 @@ public class MainMenu extends Menu{
 		if(name == "New Game")
 		{
 			TextBoxGame.output.setText("");
-			Util.changeMenus(Main.currentMenu, new NewGameMenu());
+			Util.changeMenus(this, new NewGameMenu());
 		}
 		
 		else if(name == "Load Game")

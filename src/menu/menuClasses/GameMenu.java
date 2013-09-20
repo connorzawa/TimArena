@@ -1,6 +1,7 @@
 package menu.menuClasses;
 
 
+import menu.menuClasses.GameMenuClasses.BuildingsMenu;
 import menu.menuClasses.GameMenuClasses.CitizensMenu;
 import timArena.Main;
 import timArena.TextBoxGame;
@@ -57,12 +58,12 @@ public class GameMenu extends Menu{
 	{
 		if(name == "Citizens")
 		{
-			Util.changeMenus(Main.currentMenu, new CitizensMenu());
+			Util.changeMenus(this, new CitizensMenu());
 		}
 		
 		else if(name == "Buildings")
 		{
-			System.out.println("ASDJKSALDK");
+			Util.changeMenus(this, new BuildingsMenu());
 		}
 		
 		else if(name == "Materials")

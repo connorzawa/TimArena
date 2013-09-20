@@ -1,11 +1,16 @@
 package menu.menuClasses.GameMenuClasses.Buildings;
 
+import menu.menuClasses.Menu;
+import menu.menuClasses.GameMenuClasses.CitizensMenu;
 import timArena.Citizen;
+import timArena.Main;
+import timArena.TextBoxGame;
+import timArena.Util;
 
-public class Building {
+public class Building extends Menu {
 
 	protected Citizen keeper;
-	protected String name;
+	protected String title;
 	
 	public void setKeeper(Citizen keeper)
 	{
@@ -26,4 +31,16 @@ public class Building {
 	{
 		return this.name;
 	}
+	
+	
+	public void initialize()
+	{
+		super.name = "GameMenu";
+
+		display();
+		update();
+		run();
+	}
+	
+	
 }
