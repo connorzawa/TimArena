@@ -4,8 +4,8 @@ package timArena;
 public class Citizen {
 
 	private int strength, toughness, intellect, dexterity, luck, vitality;
-	private String name;
-	private boolean male, warrior, inAParty; 
+	private String name, ID;
+	private boolean male, warrior, inAParty, hasShop; 
 	
 	public Citizen(int strength, int toughness, int dexterity, int intellect, int vitality,  int luck, String name, boolean male, boolean warrior)
 	{
@@ -17,6 +17,15 @@ public class Citizen {
 		this.male = male;
 		this.warrior = warrior;
 		this.dexterity = dexterity;
+	}
+	
+	public void setShop(boolean shop)
+	{
+		this.hasShop = shop;
+	}
+	public void setID(String ID)
+	{
+		this.ID = ID;
 	}
 	
 	public void setStrength(int strength)
@@ -63,6 +72,14 @@ public class Citizen {
 	}
 	//----------Gets--------------------
 	
+	public boolean getShop()
+	{
+		return this.hasShop;
+	}
+	public String getID()
+	{
+		return this.ID;
+	}
 	public int getStrength()
 	{
 		return this.strength;
