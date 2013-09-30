@@ -12,9 +12,13 @@ public class Building extends Menu {
 	protected Citizen keeper;
 	protected boolean hasKeeper = false;
 	protected String title;
+	protected boolean checkBuild = false;
 	
 	protected void changeKeeper()
 	{
+		checkBuild = true;
+		Util.clearOutput();
+		Util.writeOutput("Click the name of the keeper you would like to set.");
 		Util.setButtons();
 		
 		int page = 0;
@@ -64,6 +68,7 @@ public class Building extends Menu {
 	public void setKeeper(Citizen keeper)
 	{
 		this.keeper = keeper;
+		
 	}
 	
 	public void setName(String name)

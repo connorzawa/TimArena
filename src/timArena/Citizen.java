@@ -4,8 +4,22 @@ package timArena;
 public class Citizen {
 
 	private int strength, toughness, intellect, dexterity, luck, vitality;
-	private String name, ID;
-	private boolean male, warrior, inAParty, hasShop; 
+	private String name = "", ID = "";
+	private boolean male, warrior, inAParty = false, hasShop = false, empty = true; 
+
+	public Citizen()
+	{
+		this.strength = 0;
+		this.toughness = 0;
+		this.luck = 0;
+		this.vitality = 0;
+		this.name = "";
+		this.male = false;
+		this.warrior = false;
+		this.dexterity = 0;
+		inAParty = false;
+		hasShop = false;
+	}
 	
 	public Citizen(int strength, int toughness, int dexterity, int intellect, int vitality,  int luck, String name, boolean male, boolean warrior)
 	{
@@ -17,8 +31,15 @@ public class Citizen {
 		this.male = male;
 		this.warrior = warrior;
 		this.dexterity = dexterity;
+		inAParty = false;
+		hasShop = false;
+		empty = false;
 	}
 	
+	public boolean getEmpty()
+	{
+		return this.empty;
+	}
 	public void setShop(boolean shop)
 	{
 		this.hasShop = shop;
@@ -61,17 +82,14 @@ public class Citizen {
 	
 	public void changePartyStatus()
 	{
-		if(this.inAParty)
-		{
-			this.inAParty = false;
-		}
-		else
-		{
-			this.inAParty = true;
-		}
+		this.inAParty = !this.inAParty;
 	}
 	//----------Gets--------------------
 	
+	public boolean getPartyStatus()
+	{
+		return this.inAParty;
+	}
 	public boolean getShop()
 	{
 		return this.hasShop;
